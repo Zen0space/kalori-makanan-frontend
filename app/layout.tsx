@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://kalori-makanan.netlify.app"),
+  metadataBase: new URL("https://kalori-me.senitera.com"),
   openGraph: {
     title: "Kalori Makanan API - Fast & Reliable Food Calorie Data",
     description:
       "Access nutritional data for 750+ Malaysian and international foods through our simple REST API.",
-    url: "https://kalori-makanan.netlify.app",
+    url: "https://kalori-me.senitera.com",
     siteName: "Kalori Makanan API",
     images: [
       {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png" },
     ],
     apple: [{ url: "/apple-icon.png" }],
   },

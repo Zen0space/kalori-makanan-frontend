@@ -1,37 +1,38 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { Menu, X, ExternalLink } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, ExternalLink } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Documentation', href: '/docs' },
-  { name: 'Examples', href: '/examples' },
-]
+  { name: "Home", href: "/" },
+  { name: "Documentation", href: "/docs" },
+  { name: "Examples", href: "/examples" },
+];
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10
-      setScrolled(isScrolled)
-    }
+      const isScrolled = window.scrollY > 10;
+      setScrolled(isScrolled);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100'
-          : 'bg-transparent'
+          ? "bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100"
+          : "bg-transparent",
       )}
     >
       <nav className="container-max">
@@ -39,8 +40,14 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg md:text-xl">K</span>
+              <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center">
+                <Image
+                  src="/assets/Logo-nobg.png"
+                  alt="Kalori Makanan Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="font-bold text-lg md:text-xl text-gray-900">
                 Kalori Makanan
@@ -94,10 +101,10 @@ export default function Header() {
         {/* Mobile menu */}
         <div
           className={cn(
-            'md:hidden transition-all duration-300 ease-in-out',
+            "md:hidden transition-all duration-300 ease-in-out",
             mobileMenuOpen
-              ? 'max-h-96 opacity-100'
-              : 'max-h-0 opacity-0 overflow-hidden'
+              ? "max-h-96 opacity-100"
+              : "max-h-0 opacity-0 overflow-hidden",
           )}
         >
           <div className="py-4 space-y-1">
@@ -126,5 +133,5 @@ export default function Header() {
         </div>
       </nav>
     </header>
-  )
+  );
 }

@@ -2,7 +2,7 @@
 
 A modern, clean frontend for the Kalori Makanan API - providing easy access to nutritional data for 750+ Malaysian and international foods.
 
-🌐 **Live Demo**: [Coming Soon]  
+🌐 **Live Demo**: [https://kalori-me.senitera.com](https://kalori-me.senitera.com)  
 🚀 **API**: [https://kalori-makanan-kkm.onrender.com](https://kalori-makanan-kkm.onrender.com)  
 📚 **API Docs**: [https://kalori-makanan-kkm.onrender.com/docs](https://kalori-makanan-kkm.onrender.com/docs)
 
