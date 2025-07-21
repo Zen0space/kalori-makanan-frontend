@@ -1,18 +1,27 @@
 [build]
   command = "npm run build"
-  publish = "out"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "18"
 
 [functions]
   directory = "netlify/functions"
-  node_bundler = "esbuild"
+
+
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[dev]
+  command = "npm run dev"
+  port = 8888
+  targetPort = 5173
+  publish = "dist"
+  framework = "#custom"
+  autoLaunch = true
 
 [[headers]]
   for = "/*"
@@ -20,7 +29,6 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[headers]]
   for = "/*.js"
@@ -33,15 +41,6 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.woff2"
+  for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/images/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# Scheduled function settings
-[functions."keep-api-alive"]
-  schedule = "*/14 * * * *"

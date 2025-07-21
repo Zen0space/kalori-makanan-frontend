@@ -1,0 +1,6 @@
+# Turso Database Configuration
+VITE_TURSO_DB_URL=your_database_url_here
+VITE_TURSO_DB_AUTH_TOKEN=your_auth_token_here
+
+VITE_KALORI_MAKANAN_API_KEY=your_api_key_here
+VITE_KALORI_MAKANAN_BASE_URL=https://kalori-makanan-kkm.onrender.com

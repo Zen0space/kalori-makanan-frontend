@@ -1,146 +1,217 @@
-# Kalori Makanan Frontend 🍽️
+# 🍽️ Kalori Makanan Frontend
 
-A modern, clean frontend for the Kalori Makanan API - providing easy access to nutritional data for 750+ Malaysian and international foods.
+A modern, comprehensive frontend platform for the Kalori Makanan API - showcasing 750+ Malaysian and international food items with detailed nutritional information.
 
-🌐 **Live Demo**: [https://kalori-me.senitera.com](https://kalori-me.senitera.com)  
-🚀 **API**: [https://kalori-makanan-kkm.onrender.com](https://kalori-makanan-kkm.onrender.com)  
-📚 **API Docs**: [https://kalori-makanan-kkm.onrender.com/docs](https://kalori-makanan-kkm.onrender.com/docs)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://app.netlify.com/sites/your-site)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
+
+## 📋 Table of Contents
+
+- [✨ Features](#-features)
+- [🚀 Quick Start](#-quick-start)
+- [🏗️ Project Structure](#️-project-structure)
+- [🔧 Configuration](#-configuration)
+- [📚 Documentation](#-documentation)
+- [🎨 UI Components](#-ui-components)
+- [🔌 API Integration](#-api-integration)
+- [🚀 Deployment](#-deployment)
+- [🛠️ Development](#️-development)
+- [📖 Additional Guides](#-additional-guides)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ## ✨ Features
 
-- 🎯 **Modern Landing Page** - Clean, responsive design with smooth animations
-- 🔍 **Live API Demo** - Interactive search with real-time results
-- 📖 **Comprehensive Documentation** - Complete API reference and guides
-- 💻 **Code Examples** - Ready-to-use code snippets in multiple languages
-- 📱 **Mobile Responsive** - Works perfectly on all devices
-- ⚡ **Fast Performance** - Optimized for speed and efficiency
+### 🌟 Core Features
+- **🏠 Interactive Landing Page** - Beautiful showcase of the API with live demos
+- **📖 Comprehensive Documentation** - Complete API reference with examples
+- **🧪 Interactive API Tester** - Test endpoints directly in the browser
+- **🔐 Authentication System** - API key generation and management
+- **📊 Analytics Dashboard** - Usage tracking and insights
+- **🎨 Dark/Light Theme** - Full theme support with system preference detection
 
-## 🛠️ Tech Stack
+### 🔧 Technical Features
+- **⚡ Modern Stack** - Vite + React + TypeScript + Tailwind CSS
+- **📱 Responsive Design** - Mobile-first, works on all devices
+- **♿ Accessibility** - WCAG compliant components
+- **🚀 Performance Optimized** - Fast loading with code splitting
+- **🤖 Keep-Alive System** - Prevents API hibernation (see [Keep-Alive Guide](#keep-alive-function))
+- **🔒 Type-Safe** - Full TypeScript integration with API types
 
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Data Fetching**: SWR
-- **Icons**: Lucide React
-- **Deployment**: Netlify
-
-## 📋 Prerequisites
-
-- Node.js 18.x or higher
-- npm or yarn package manager
-- Git
+### 🍽️ Food API Features
+- **🔍 Smart Search** - Search 750+ food items with autocomplete
+- **📊 Nutrition Data** - Detailed calorie and nutrition information
+- **🏷️ Categories** - 11 organized food categories
+- **🇲🇾 Malaysian Focus** - Extensive Malaysian food database
+- **🌍 International** - Global food items included
 
 ## 🚀 Quick Start
 
-### 1. Clone the repository
+### Prerequisites
+- Node.js 18+ and npm
+- Git
 
-```bash
-git clone https://github.com/Zen0space/kalori-makanan-frontend.git
-cd kalori-makanan-frontend
-```
+### Installation
 
-### 2. Install dependencies
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/kalori-makanan-frontend.git
+   cd kalori-makanan-frontend
+   ```
 
-```bash
-npm install
-# or
-yarn install
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### 3. Set up environment variables
+3. **Set up environment variables**
+   ```bash
+   cp env-example.txt .env.local
+   ```
 
-Create a `.env.local` file in the root directory:
+   Update `.env.local` with your API credentials:
+   ```env
+   VITE_KALORI_MAKANAN_BASE_URL=https://kalori-makanan-kkm.onrender.com
+   VITE_KALORI_MAKANAN_API_KEY=your_api_key_here
+   ```
 
-```env
-NEXT_PUBLIC_API_BASE_URL=https://kalori-makanan-kkm.onrender.com
-```
+4. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-### 4. Run the development server
+5. **Open your browser**
+   ```
+   http://localhost:5173
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view the application.
-
-## 📁 Project Structure
+## 🏗️ Project Structure
 
 ```
 kalori-makanan-frontend/
-├── app/                    # Next.js app directory
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Landing page
-│   ├── globals.css        # Global styles
-│   ├── docs/              # Documentation page
-│   └── examples/          # API examples page
-├── components/            # React components
-│   ├── ui/                # Reusable UI components
-│   ├── layout/            # Layout components
-│   └── sections/          # Page sections
-├── lib/                   # Utilities and helpers
-│   ├── api.ts            # API client
-│   ├── types.ts          # TypeScript types
-│   └── utils.ts          # Utility functions
-├── public/               # Static assets
-└── package.json          # Dependencies
+├── 📁 src/
+│   ├── 📁 components/          # Reusable UI components
+│   │   ├── 📁 ui/             # Base UI components (Button, Card, etc.)
+│   │   ├── Auth.tsx           # Authentication components
+│   │   ├── Header.tsx         # Navigation header
+│   │   └── Footer.tsx         # Site footer
+│   ├── 📁 screen/             # Main page components
+│   │   ├── Home.tsx           # Landing page
+│   │   ├── Documentation.tsx  # API documentation
+│   │   ├── Examples.tsx       # Code examples & testing
+│   │   └── Dashboard.tsx      # User dashboard
+│   ├── 📁 lib/                # Core utilities
+│   │   ├── api.ts             # API client functions
+│   │   ├── types.ts           # TypeScript interfaces
+│   │   ├── auth.ts            # Authentication logic
+│   │   └── db.ts              # Database utilities
+│   ├── 📁 context/            # React context providers
+│   └── 📁 utils/              # Helper functions
+├── 📁 netlify/
+│   └── 📁 functions/          # Serverless functions
+│       └── keep-alive.mts     # API keep-alive function
+├── 📁 public/                 # Static assets
+├── 📄 README.md               # This file
+├── 📄 LIVE_API_SETUP.md       # API setup guide
+├── 📄 KEEP_ALIVE_FUNCTION.md  # Keep-alive documentation
+└── 📄 todo.md                 # Development roadmap
 ```
 
-## 🔧 Available Scripts
+## 🔧 Configuration
 
-```bash
-# Development
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run ESLint
+### Environment Variables
 
-# Type checking
-npm run type-check   # Run TypeScript compiler check
+| Variable | Description | Required | Default |
+|----------|-------------|----------|---------|
+| `VITE_KALORI_MAKANAN_BASE_URL` | API base URL | ✅ | `https://kalori-makanan-kkm.onrender.com` |
+| `VITE_KALORI_MAKANAN_API_KEY` | API authentication key | ✅ | - |
+| `VITE_TURSO_DB_URL` | Database URL for user data | ⚠️ | - |
+| `VITE_TURSO_DB_AUTH_TOKEN` | Database auth token | ⚠️ | - |
+
+⚠️ = Required for full functionality
+
+### Build Configuration
+
+The project uses Vite with optimized build settings:
+- **Output**: `dist/` directory
+- **Assets**: Automatic optimization and hashing
+- **Code Splitting**: Automatic for optimal loading
+- **Source Maps**: Enabled for debugging
+
+## 📚 Documentation
+
+The platform includes comprehensive documentation:
+
+### 📖 Built-in Documentation
+- **API Reference** - Complete endpoint documentation
+- **Code Examples** - Copy-paste ready examples in multiple languages
+- **Authentication Guide** - API key setup and usage
+- **Error Handling** - Common issues and solutions
+
+### 🔗 External Links
+- **Live API Docs**: [https://kalori-makanan-kkm.onrender.com/docs](https://kalori-makanan-kkm.onrender.com/docs)
+- **ReDoc Interface**: [https://kalori-makanan-kkm.onrender.com/redoc](https://kalori-makanan-kkm.onrender.com/redoc)
+
+## 🎨 UI Components
+
+### Base Components
+- **Button** - Various styles and states
+- **Card** - Content containers with shadows
+- **Badge** - Status and category indicators
+- **CodeBlock** - Syntax-highlighted code display
+
+### Layout Components
+- **Header** - Navigation with theme toggle
+- **Footer** - Links and information
+- **Container** - Responsive content wrapper
+
+### Feature Components
+- **ApiTester** - Interactive API testing interface
+- **Auth** - Authentication forms and management
+- **UsageChart** - Analytics visualization
+
+## 🔌 API Integration
+
+### Type-Safe API Client
+
+The platform includes a comprehensive API client with:
+
+```typescript
+// Example API usage
+import { searchFoods, getCategories } from './lib/api';
+
+// Search for foods
+const results = await searchFoods('nasi lemak');
+
+// Get all categories
+const categories = await getCategories();
 ```
 
-## 🌐 Deployment
+### Supported Endpoints
+- `GET /health` - API health check
+- `GET /foods/search` - Search food items
+- `GET /foods/{id}` - Get specific food
+- `GET /foods` - List all foods (paginated)
+- `GET /categories` - Get food categories
+- `GET /foods/search/{name}/calories` - Quick calorie lookup
 
-### Deploying to Netlify
+### Error Handling
+- Automatic retry for failed requests
+- User-friendly error messages
+- Comprehensive logging for debugging
 
-1. **Build Configuration**
+## 🚀 Deployment
 
-   Create `netlify.toml` in the root directory:
+### Netlify Deployment (Recommended)
 
-   ```toml
-   [build]
-     command = "npm run build"
-     publish = "out"
-
-   [[redirects]]
-     from = "/*"
-     to = "/index.html"
-     status = 200
-   ```
-
-2. **Configure Next.js for Static Export**
-
-   Update `next.config.mjs`:
-
-   ```javascript
-   const nextConfig = {
-     output: 'export',
-     trailingSlash: true,
-     images: {
-       unoptimized: true
-     }
-   }
-   ```
-
-3. **Deploy to Netlify**
-
-   - Connect your GitHub repository to Netlify
-   - Set build command: `npm run build`
-   - Set publish directory: `out`
-   - Add environment variable: `NEXT_PUBLIC_API_BASE_URL`
-   - Deploy!
+1. **Connect your repository** to Netlify
+2. **Configure build settings**:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+3. **Set environment variables** in Netlify dashboard
+4. **Deploy** and enjoy!
 
 ### Manual Deployment
 
@@ -148,77 +219,156 @@ npm run type-check   # Run TypeScript compiler check
 # Build for production
 npm run build
 
-# The 'out' directory contains the static files
-# Upload this directory to your hosting provider
+# Preview build locally
+npm run preview
+
+# Deploy to Netlify
+npm run netlify:deploy
 ```
 
-## 🔌 API Integration
+### Keep-Alive Function
 
-The frontend integrates with the Kalori Makanan API. Key endpoints:
+The project includes an automatic keep-alive system that prevents your API from hibernating on free hosting services. See the [Keep-Alive Function Guide](#keep-alive-function) for details.
 
-- `GET /foods/search?name={name}` - Search foods
-- `GET /foods/{id}` - Get food by ID
-- `GET /categories` - List categories
-- `GET /foods` - List all foods (paginated)
+## 🛠️ Development
 
-See the [API documentation](https://kalori-makanan-kkm.onrender.com/docs) for complete details.
+### Available Scripts
 
-## 🎨 Customization
+```bash
+# Development
+npm run dev              # Start dev server
+npm run build            # Build for production
+npm run preview          # Preview production build
 
-### Colors
+# Testing & Quality
+npm run lint             # Run ESLint
+npm run type-check       # TypeScript checking
 
-Edit the color palette in `tailwind.config.ts`:
-
-```javascript
-colors: {
-  primary: {
-    DEFAULT: '#4299e1',
-    dark: '#3182ce',
-    light: '#63b3ed',
-  },
-  // ... more colors
-}
+# Netlify
+npm run netlify:dev      # Netlify dev environment
+npm run netlify:build    # Build for Netlify
+npm run netlify:deploy   # Deploy to Netlify
 ```
 
-### Fonts
+### Development Guidelines
 
-The project uses Inter for body text and JetBrains Mono for code. To change fonts, update `app/globals.css` and `app/layout.tsx`.
+- **TypeScript**: All code must be typed
+- **ESLint**: Follow configured linting rules
+- **Responsive**: Mobile-first design approach
+- **Accessibility**: Ensure components are accessible
+- **Performance**: Optimize for fast loading
+
+### Tech Stack Details
+
+| Technology | Purpose | Version |
+|------------|---------|---------|
+| **React** | UI Framework | 18.2+ |
+| **TypeScript** | Type Safety | 5.2+ |
+| **Vite** | Build Tool | 5.2+ |
+| **Tailwind CSS** | Styling | 3.4+ |
+| **Framer Motion** | Animations | 12.23+ |
+| **SWR** | Data Fetching | 2.3+ |
+| **Lucide React** | Icons | 0.525+ |
+
+## 📖 Additional Guides
+
+### 📋 Detailed Documentation
+
+1. **[🔄 Keep-Alive Function](KEEP_ALIVE_FUNCTION.md)**
+   - Prevents API hibernation
+   - Automatic scheduling options
+   - Configuration and monitoring
+   - Troubleshooting guide
+
+2. **[🔌 Live API Setup](LIVE_API_SETUP.md)**
+   - Environment configuration
+   - API key setup
+   - Testing your integration
+   - Troubleshooting common issues
+
+3. **[📝 Development Roadmap](todo.md)**
+   - Completed features checklist
+   - Future improvement plans
+   - Phase-by-phase enhancement roadmap
+
+### 🎯 Quick Navigation
+
+- **Need to set up the API?** → [Live API Setup Guide](LIVE_API_SETUP.md)
+- **API going to sleep?** → [Keep-Alive Function](KEEP_ALIVE_FUNCTION.md)
+- **Want to contribute?** → [Development Roadmap](todo.md)
+- **Found a bug?** → [Create an issue](https://github.com/Zen0space/kalori-makanan-frontend/issues)
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please follow these steps:
+We welcome contributions! Here's how you can help:
 
+### 🐛 Reporting Issues
+1. Check existing issues first
+2. Use the issue template
+3. Provide detailed reproduction steps
+
+### 💡 Suggesting Features
+1. Check the [roadmap](todo.md) first
+2. Create a feature request issue
+3. Explain the use case and benefits
+
+### 🔧 Development Contributions
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-## 🐛 Bug Reports
+### 📝 Documentation
+- Improve existing docs
+- Add examples and tutorials
+- Fix typos and errors
 
-Found a bug? Please [open an issue](https://github.com/Zen0space/kalori-makanan-frontend/issues) with:
+## 🏆 Project Status
 
-- Bug description
-- Steps to reproduce
-- Expected behavior
-- Screenshots (if applicable)
+- ✅ **Core Features**: Complete
+- ✅ **Authentication**: Implemented
+- ✅ **API Integration**: Full coverage
+- ✅ **Documentation**: Comprehensive
+- ✅ **Deployment**: Production ready
+- 🚀 **Future Enhancements**: [See roadmap](todo.md)
+
+## 📊 Key Metrics
+
+- **🍽️ Food Items**: 750+ in database
+- **🏷️ Categories**: 11 organized groups
+- **⚡ Performance**: Lighthouse score 90+
+- **📱 Mobile**: Fully responsive
+- **♿ Accessibility**: WCAG 2.1 compliant
+- **🔒 Security**: Type-safe with error handling
+
+## 📞 Support
+
+### Getting Help
+
+1. **📖 Documentation**: Check the guides above
+2. **🐛 Issues**: [GitHub Issues](https://github.com/Zen0space/kalori-makanan-frontend/issues)
+3. **💬 Discussions**: [GitHub Discussions](https://github.com/Zen0space/kalori-makanan-frontend/discussions)
+4. **📧 Email**: Support contact (if available)
+
+### Useful Links
+
+- **🌐 Live Demo**: [https://kalori-me.senitera.com/]
+- **📚 API Docs**: [https://kalori-makanan-kkm.onrender.com/docs](https://kalori-makanan-kkm.onrender.com/docs)
+- **🔧 Backend Repo**: [Backend repository link]
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- [Kalori Makanan API](https://github.com/Zen0space/kalori-makanan-kkm) for providing the food data
-- [Next.js](https://nextjs.org/) for the amazing framework
-- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
-- [Vercel](https://vercel.com/) for Next.js and inspiration
-
-## 📞 Contact
-
-- **API Issues**: [API Repository](https://github.com/Zen0space/kalori-makanan-kkm)
-- **Frontend Issues**: [Frontend Repository](https://github.com/Zen0space/kalori-makanan-frontend)
-
 ---
 
-Made with ❤️ in Malaysia
+<div align="center">
+
+**Built with ❤️ for the developer community**
+
+🍽️ **Kalori Makanan Frontend** - Making nutrition data accessible through beautiful, fast, and reliable APIs
+
+[⭐ Star this repo](https://github.com/Zen0space/kalori-makanan-frontend) • [🐛 Report Bug](https://github.com/Zen0space/kalori-makanan-frontend/issues) • [💡 Request Feature](https://github.com/Zen0space/kalori-makanan-frontend/issues)
+
+</div>

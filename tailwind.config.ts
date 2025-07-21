@@ -1,62 +1,44 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#4299e1',
-          dark: '#3182ce',
-          light: '#63b3ed',
+          DEFAULT: "#4299e1",
+          dark: "#3182ce",
         },
         secondary: {
-          DEFAULT: '#48bb78',
-          dark: '#38a169',
-          light: '#68d391',
+          DEFAULT: "#48bb78",
         },
         accent: {
-          DEFAULT: '#ed8936',
-          dark: '#dd6b20',
-          light: '#f6ad55',
+          DEFAULT: "#ed8936",
         },
-        gray: {
-          50: '#f7fafc',
-          100: '#edf2f7',
-          200: '#e2e8f0',
-          300: '#cbd5e0',
-          400: '#a0aec0',
-          500: '#718096',
-          600: '#4a5568',
-          700: '#2d3748',
-          800: '#1a202c',
-          900: '#171923',
-        },
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
+        float: "float 3s ease-in-out infinite",
+        "pulse-slow": "pulse-slow 3s ease-in-out infinite",
       },
       keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
         },
-        slideUp: {
-          '0%': { transform: 'translateY(10px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.8" },
         },
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-mesh":
+          "radial-gradient(at 47% 33%, hsl(162, 77%, 40%) 0, transparent 59%), radial-gradient(at 82% 65%, hsl(198, 100%, 50%) 0, transparent 55%)",
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+
+export default config;
