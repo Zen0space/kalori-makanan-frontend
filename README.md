@@ -1,6 +1,6 @@
-# 🍽️ Kalori Makanan Frontend
+# 🍽️ Kalori Makanan Malaysia - Trusted by KKM
 
-A modern, comprehensive frontend platform for the Kalori Makanan API - showcasing 750+ Malaysian and international food items with detailed nutritional information.
+A modern, comprehensive frontend platform for Malaysia's most trusted food calorie API - showcasing 750+ Malaysian and international food items with detailed nutritional information by KKM (Kementerian Kesihatan Malaysia).
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://app.netlify.com/sites/your-site)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -42,10 +42,11 @@ A modern, comprehensive frontend platform for the Kalori Makanan API - showcasin
 
 ### 🍽️ Food API Features
 - **🔍 Smart Search** - Search 750+ food items with autocomplete
-- **📊 Nutrition Data** - Detailed calorie and nutrition information
+- **📊 Nutrition Data** - Detailed calorie and nutrition information by KKM
 - **🏷️ Categories** - 11 organized food categories
 - **🇲🇾 Malaysian Focus** - Extensive Malaysian food database
 - **🌍 International** - Global food items included
+- **🏥 KKM Data** - Nutritional data by Kementerian Kesihatan Malaysia
 
 ## 🚀 Quick Start
 
@@ -324,6 +325,12 @@ We welcome contributions! Here's how you can help:
 - Add examples and tutorials
 - Fix typos and errors
 
+## 🔗 Related Projects
+
+- **🍽️ Kalori Makanan API**: [Backend API Repository](https://github.com/Zen0space/kalori-makanan-kkm)
+- **📚 API Documentation**: [Interactive Swagger Docs](https://kalori-makanan-kkm.onrender.com/docs)
+- **📖 ReDoc Interface**: [Alternative API Docs](https://kalori-makanan-kkm.onrender.com/redoc)
+
 ## 🏆 Project Status
 
 - ✅ **Core Features**: Complete
@@ -353,9 +360,11 @@ We welcome contributions! Here's how you can help:
 
 ### Useful Links
 
-- **🌐 Live Demo**: [https://kalori-me.senitera.com/]
+- **🌐 Live Demo**: [https://kalori-me.senitera.com/](https://kalori-me.senitera.com/)
 - **📚 API Docs**: [https://kalori-makanan-kkm.onrender.com/docs](https://kalori-makanan-kkm.onrender.com/docs)
-- **🔧 Backend Repo**: [Backend repository link]
+- **🔧 Backend API Repo**: [https://github.com/Zen0space/kalori-makanan-kkm](https://github.com/Zen0space/kalori-makanan-kkm)
+- **📖 Frontend Repo**: [https://github.com/Zen0space/kalori-makanan-frontend](https://github.com/Zen0space/kalori-makanan-frontend)
+- **📊 ReDoc Interface**: [https://kalori-makanan-kkm.onrender.com/redoc](https://kalori-makanan-kkm.onrender.com/redoc)
 
 ## 📄 License
 
@@ -367,7 +376,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built with ❤️ for the developer community**
 
-🍽️ **Kalori Makanan Frontend** - Making nutrition data accessible through beautiful, fast, and reliable APIs
+**🍽️ Kalori Makanan Malaysia** - Making trusted nutrition data accessible through beautiful, fast, and reliable APIs with data by KKM
 
 [⭐ Star this repo](https://github.com/Zen0space/kalori-makanan-frontend) • [🐛 Report Bug](https://github.com/Zen0space/kalori-makanan-frontend/issues) • [💡 Request Feature](https://github.com/Zen0space/kalori-makanan-frontend/issues)
 

@@ -1,0 +1,76 @@
+{
+  "name": "Kalori Makanan Malaysia - Trusted Food Calorie API by KKM",
+  "short_name": "Kalori Makanan Malaysia",
+  "description": "Malaysia's most comprehensive food calorie API with 750+ Malaysian & international foods. Trusted nutritional data by KKM (Kementerian Kesihatan Malaysia).",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4299e1",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-MY",
+  "dir": "ltr",
+  "categories": ["health", "nutrition", "food", "api", "developer", "malaysia"],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/logo.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "API Documentation",
+      "short_name": "Docs",
+      "description": "View API documentation and examples",
+      "url": "/#docs",
+      "icons": [
+        {
+          "src": "/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "API Tester",
+      "short_name": "Test API",
+      "description": "Test API endpoints interactively",
+      "url": "/#examples",
+      "icons": [
+        {
+          "src": "/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

@@ -46,12 +46,21 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <button
               onClick={() => setCurrentPage("home")}
-              className="flex items-center space-x-2 text-xl font-bold text-gray-900 dark:text-white"
+              className="flex items-center space-x-3 text-xl font-bold text-gray-900 dark:text-white hover:opacity-80 transition-opacity"
             >
-              <span className="text-2xl">🍽️</span>
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Kalori Makanan
-              </span>
+              <img
+                src="/logo.png"
+                alt="Kalori Makanan Malaysia Logo"
+                className="w-10 h-10 rounded-lg shadow-sm"
+              />
+              <div className="flex flex-col items-start">
+                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-lg leading-tight">
+                  Kalori Makanan Malaysia
+                </span>
+                <span className="text-xs font-medium text-green-600 dark:text-green-400 leading-tight">
+                  Data by KKM
+                </span>
+              </div>
             </button>
           </motion.div>
 

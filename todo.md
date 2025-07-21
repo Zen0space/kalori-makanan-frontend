@@ -393,7 +393,7 @@ export default defineConfig({
 
 ---
 
-## 🚀 **FUTURE IMPROVEMENTS ROADMAP** - 2024+ Enhancement Plan
+## 🚀 **FUTURE IMPROVEMENTS ROADMAP** - 2025+ Enhancement Plan
 
 Based on current industry trends, API platform best practices, and modern web development standards, here are strategic improvements to take the platform to the next level:
 
@@ -404,7 +404,7 @@ Based on current industry trends, API platform best practices, and modern web de
 ### 🚀 Performance & Core Improvements
 - [ ] **PWA Implementation** - Make app installable with offline support
   - [ ] Add service worker for caching
-  - [ ] Add web app manifest 
+  - [ ] Add web app manifest
   - [ ] Enable "Add to Home Screen" functionality
   - [ ] Offline fallback pages for documentation
 

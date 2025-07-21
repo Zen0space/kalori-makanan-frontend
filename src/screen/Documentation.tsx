@@ -267,12 +267,24 @@ curl -H "X-API-Key: $API_KEY" \\
           className="text-center mb-12"
         >
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-            API Documentation
+            Kalori Makanan Malaysia
+            <br />
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              API Documentation
+            </span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Complete guide to integrating the Kalori Makanan API into your
-            application
+            Complete guide to integrating Malaysia's most trusted food calorie
+            API with nutritional data by KKM (Kementerian Kesihatan Malaysia)
           </p>
+          <div className="flex items-center justify-center mt-4">
+            <div className="flex items-center space-x-2 bg-green-50 dark:bg-green-900/20 px-4 py-2 rounded-full border border-green-200 dark:border-green-800">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span className="text-green-700 dark:text-green-400 font-medium text-sm">
+                Data by KKM
+              </span>
+            </div>
+          </div>
         </motion.div>
 
         {/* Getting Started */}

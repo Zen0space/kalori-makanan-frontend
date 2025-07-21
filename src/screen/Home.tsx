@@ -59,7 +59,7 @@ export const Home: React.FC<HomeProps> = () => {
   const stats = [
     { value: "750+", label: "Food Items" },
     { value: "11", label: "Categories" },
-    { value: "REST", label: "API Standard" },
+    { value: "KKM", label: "Trusted Data" },
     { value: "99.9%", label: "Uptime" },
   ];
 
@@ -151,17 +151,40 @@ foods = response.json()["foods"]`,
             </Badge>
 
             <h1 className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-              Fast & Reliable
+              Malaysia's Most Trusted
               <br />
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Food Calorie API
               </span>
             </h1>
 
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
               750+ Malaysian & International Foods with detailed nutritional
-              data. Perfect for building health and nutrition applications.
+              data by KKM (Kementerian Kesihatan Malaysia) for accurate health
+              information.
             </p>
+
+            <div className="flex items-center justify-center space-x-4 mb-8">
+              <div className="flex items-center space-x-2 bg-green-50 dark:bg-green-900/20 px-4 py-2 rounded-full border border-green-200 dark:border-green-800">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <span className="text-green-700 dark:text-green-400 font-medium text-sm">
+                  Data by KKM
+                </span>
+              </div>
+              {healthStatus && (
+                <div className="flex items-center space-x-2 bg-blue-50 dark:bg-blue-900/20 px-4 py-2 rounded-full border border-blue-200 dark:border-blue-800">
+                  <div
+                    className={`w-2 h-2 rounded-full ${healthStatus.status === "healthy" ? "bg-green-500" : "bg-red-500"}`}
+                  ></div>
+                  <span className="text-blue-700 dark:text-blue-400 font-medium text-sm">
+                    API Status:{" "}
+                    {healthStatus.status === "healthy"
+                      ? "Operational"
+                      : "Issues Detected"}
+                  </span>
+                </div>
+              )}
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -189,36 +212,6 @@ foods = response.json()["foods"]`,
                 View Documentation
               </Button>
             </div>
-
-            {/* API Status */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="mt-8 flex flex-col items-center space-y-2 text-sm"
-            >
-              {healthStatus && (
-                <div className="inline-flex items-center space-x-2">
-                  <div
-                    className={`w-2 h-2 rounded-full ${healthStatus.status === "healthy" ? "bg-green-500" : "bg-red-500"} animate-pulse`}
-                  ></div>
-                  <span className="text-gray-600 dark:text-gray-400">
-                    API Status:{" "}
-                    {healthStatus.status === "healthy"
-                      ? "Operational"
-                      : "Issues Detected"}
-                  </span>
-                </div>
-              )}
-              <div className="inline-flex items-center space-x-2">
-                <div
-                  className={`w-2 h-2 rounded-full ${isApiConfigured() ? "bg-blue-500" : "bg-yellow-500"}`}
-                ></div>
-                <span className="text-gray-600 dark:text-gray-400">
-                  API Key: {isApiConfigured() ? "Configured" : "Not Set"}
-                </span>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -561,7 +554,7 @@ foods = response.json()["foods"]`,
                   size="lg"
                   onClick={() =>
                     window.open(
-                      "https://github.com/yourusername/kalori-makanan-api",
+                      "https://github.com/Zen0space/kalori-makanan-kkm",
                       "_blank",
                     )
                   }
